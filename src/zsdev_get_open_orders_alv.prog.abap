@@ -8,14 +8,13 @@ DATA: lt_outtab TYPE STANDARD TABLE OF alv_t_t2.
 
 DATA: BEGIN OF object_tab OCCURS 1.
         INCLUDE STRUCTURE rihaufk_list AS rihaufk_list.
-ENHANCEMENT-POINT EHP605_RIAUFK20_01 SPOTS ES_RIAUFK20 STATIC .
 
 * Start of Note 2721584
 * this include has been moved to the top
 * manually added fields has to be at the end of the structure
 * because it can cause inconsistencies during excel export
 * SAP Note 2417613
-    INCLUDE STRUCTURE eams_s_order_mcall.
+ "  INCLUDE STRUCTURE eams_s_order_mcall.
 * SAP Note 2417613
 * End of Note 2721584
 DATA:  ppsid LIKE viaufkst-ppsid.
